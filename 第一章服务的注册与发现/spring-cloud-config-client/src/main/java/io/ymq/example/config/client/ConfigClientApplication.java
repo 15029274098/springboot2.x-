@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
  * 两个注解任选其一都是可以的
 */
 public class ConfigClientApplication {
-
+	//读取配置文件的端口号
     @Value("${server.port}")
     String port;
-
+	
     @RequestMapping("/")
     public String home() {
         return "port:" + port;
